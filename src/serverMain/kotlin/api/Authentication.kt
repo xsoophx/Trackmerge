@@ -1,3 +1,5 @@
+package api
+
 import java.net.URLEncoder
 
 const val CLIENT_ID = "57b8759dc45246eb9e1434cedbaf5e44"
