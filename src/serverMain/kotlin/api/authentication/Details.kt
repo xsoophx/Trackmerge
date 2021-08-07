@@ -1,8 +1,9 @@
-package api
+package api.authentication
 
 data class AuthenticationDetails(
     val accessToken: String,
     val tokenType: TokenType,
+    val expiresIn: Int,
 
 )
 

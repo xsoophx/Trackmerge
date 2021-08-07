@@ -60,6 +60,10 @@ kotlin {
                 implementation("io.ktor:ktor-server-core:${Versions.KTOR}")
                 implementation("io.ktor:ktor-html-builder:${Versions.KTOR}")
                 implementation("io.ktor:ktor-jackson:${Versions.KTOR}")
+                implementation("io.ktor:ktor-auth:${Versions.KTOR}")
+
+                implementation("io.ktor:ktor-client-core:${Versions.KTOR}")
+                implementation("io.ktor:ktor-client-cio:${Versions.KTOR}")
 
                 implementation("ch.qos.logback:logback-classic:${Versions.LOGBACK}")
 
