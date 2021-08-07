@@ -1,4 +1,4 @@
-#Spotify Trackmerge
+# Spotify Trackmerge
 
 With this tool, you'll be able to log into your Spotify account and merge selected Playlists together.
 Either you select them manually, or the tracks will be selected by Genre. 
