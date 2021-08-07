@@ -1,9 +1,9 @@
-package api
+package api.authentication
 
 import java.net.URLEncoder
 
 const val CLIENT_ID = "57b8759dc45246eb9e1434cedbaf5e44"
-const val REDIRECT_URI = "https://suffro.cc/trackmerge/callback" // TODO: add "real" URL
+const val REDIRECT_URI = "https://suffro.cc/trackmerge/callback"
 
 fun createAuthUrl(
     scopes: Map<String, String> = emptyMap(),
@@ -17,4 +17,10 @@ fun createAuthUrl(
 private fun encodeScope(scopes: Map<String, String>): String {
     return ""
     // TODO:
+}
+
+fun extractToken(callbackToken: String?): String? {
+    return if (callbackToken.isNullOrBlank()) null
+    else
+        callbackToken.split("access_token=")[1].split("&")[0]
 }

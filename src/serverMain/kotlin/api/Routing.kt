@@ -1,5 +1,7 @@
 package api
 
+import api.authentication.createAuthUrl
+import api.authentication.extractToken
 import io.ktor.application.call
 import io.ktor.html.respondHtml
 import io.ktor.response.respondRedirect
@@ -16,11 +18,12 @@ fun Route.redirectUser() {
 }
 
 fun Route.getToken() {
-    get("/callback/{id}") {
+    get("/callback#{id}") {
+        val token = call.parameters["id"]
         call.respondHtml {
             body {
                 p {
-                    +"Your token is ${call.parameters["id"]}."
+                    +"Your token is ${extractToken(token)}."
                 }
             }
         }
