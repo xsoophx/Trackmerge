@@ -1,6 +1,5 @@
-package api
+package api.authentication
 
-import api.authentication.createAuthUrl
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
 import kotlin.test.assertEquals

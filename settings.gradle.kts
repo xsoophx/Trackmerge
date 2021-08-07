@@ -1,2 +1,2 @@
-rootProject.name = "TrackmergeServer"
+rootProject.name = "Trackmerge"
 

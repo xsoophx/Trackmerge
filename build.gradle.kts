@@ -1,5 +1,5 @@
 plugins {
-    kotlin("multiplatform") version "1.5.10"
+    kotlin("multiplatform") version "1.5.20"
 }
 
 group = "org.example"
@@ -15,6 +15,7 @@ object Versions {
     const val JUNIT = "5.7.2"
     const val KTOR = "1.6.2"
     const val LOGBACK = "1.2.5"
+    const val MOCKK = "1.12.0"
 }
 
 kotlin {
@@ -66,11 +67,6 @@ kotlin {
                 implementation("io.ktor:ktor-client-cio:${Versions.KTOR}")
 
                 implementation("ch.qos.logback:logback-classic:${Versions.LOGBACK}")
-
-                implementation("com.fasterxml.jackson.core:jackson-core:${Versions.JACKSON}")
-                implementation("com.fasterxml.jackson.core:jackson-databind:${Versions.JACKSON}")
-                implementation("com.fasterxml.jackson.core:jackson-annotations:${Versions.JACKSON}")
-                implementation("com.fasterxml.jackson.module:jackson-module-kotlin:${Versions.JACKSON}")
             }
         }
 
@@ -83,6 +79,8 @@ kotlin {
                 runtimeOnly("org.junit.jupiter:junit-jupiter-engine:${Versions.JUNIT}")
 
                 implementation("io.ktor:ktor-server-test-host:${Versions.KTOR}")
+
+                implementation("io.mockk:mockk:${Versions.MOCKK}")
             }
         }
     }
@@ -90,7 +88,7 @@ kotlin {
 
 tasks {
     "wrapper"(Wrapper::class) {
-        version = "5.4.1"
+        version = "7.0"
     }
 
     "serverTest"(Test::class) {
