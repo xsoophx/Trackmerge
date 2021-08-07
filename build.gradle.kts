@@ -36,7 +36,6 @@ kotlin {
         }
     }
 
-
     sourceSets {
         commonMain {
             dependencies {
@@ -82,5 +81,15 @@ kotlin {
                 implementation("io.ktor:ktor-server-test-host:${Versions.KTOR}")
             }
         }
+    }
+}
+
+tasks {
+    "wrapper"(Wrapper::class) {
+        version = "5.4.1"
+    }
+
+    "serverTest"(Test::class) {
+        useJUnitPlatform()
     }
 }

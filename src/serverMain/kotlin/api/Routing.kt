@@ -16,7 +16,7 @@ fun Route.redirectUser() {
 }
 
 fun Route.getToken() {
-    get("/token/{id}") {
+    get("/callback/{id}") {
         call.respondHtml {
             body {
                 p {
