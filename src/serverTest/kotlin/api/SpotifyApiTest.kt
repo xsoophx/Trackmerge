@@ -15,7 +15,6 @@ import io.specto.hoverfly.junit.core.SimulationSource.dsl
 import io.specto.hoverfly.junit.dsl.HoverflyDsl.service
 import io.specto.hoverfly.junit.dsl.ResponseCreators.success
 import io.specto.hoverfly.junit5.HoverflyExtension
-import io.specto.hoverfly.junit5.api.HoverflySimulate
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.TestInstance
 import org.junit.jupiter.api.TestInstance.Lifecycle

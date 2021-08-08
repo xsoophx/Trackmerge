@@ -7,5 +7,9 @@ data class AuthenticationDetails(
 )
 
 enum class TokenType(val token: String) {
-    BEARER("Bearer")
+    BEARER("Bearer");
+
+    companion object {
+        val byName = values().associateBy(TokenType::token)
+    }
 }
