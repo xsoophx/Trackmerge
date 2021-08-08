@@ -1,6 +1,5 @@
 package api
 
-import Playlists
 import api.authentication.AuthenticationDetails
 import io.ktor.client.HttpClient
 import io.ktor.client.request.get
@@ -16,7 +15,7 @@ class SpotifyApi(
     private val authenticationDetails: AuthenticationDetails,
     private val client: HttpClient,
 ) {
-    suspend fun getUsersPlaylists(limit: Int, offset: Int): Playlists {
+    suspend fun getUsersPlaylists(limit: Int, offset: Int): String {
         return client.get(SPOTIFY_BASE_URL + LIST_PLAYLIST_URL) {
             parameter("limit", limit)
             parameter("offset", offset)

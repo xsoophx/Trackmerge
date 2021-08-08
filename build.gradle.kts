@@ -7,7 +7,6 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
-    maven("https://kotlin.bintray.com/kotlinx")
 }
 
 object Versions {
@@ -16,6 +15,7 @@ object Versions {
     const val KTOR = "1.6.2"
     const val LOGBACK = "1.2.5"
     const val MOCKK = "1.12.0"
+    const val HOVERFLY = "0.14.0"
 }
 
 kotlin {
@@ -60,7 +60,6 @@ kotlin {
                 implementation("io.ktor:ktor-server-netty:${Versions.KTOR}")
                 implementation("io.ktor:ktor-server-core:${Versions.KTOR}")
                 implementation("io.ktor:ktor-html-builder:${Versions.KTOR}")
-                implementation("io.ktor:ktor-jackson:${Versions.KTOR}")
                 implementation("io.ktor:ktor-auth:${Versions.KTOR}")
 
                 implementation("io.ktor:ktor-client-core:${Versions.KTOR}")
@@ -81,6 +80,8 @@ kotlin {
                 implementation("io.ktor:ktor-server-test-host:${Versions.KTOR}")
 
                 implementation("io.mockk:mockk:${Versions.MOCKK}")
+
+                implementation("io.specto:hoverfly-java-junit5:${Versions.HOVERFLY}")
             }
         }
     }
